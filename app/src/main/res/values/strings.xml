@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Week 2</string>
+    <string name="toolbar_title">Donation. 1.5</string>
+    <string name="welcome">Welcome Homer</string>
+    <string name="please">Please Give Generously</string>
+    <string name="opt1">PayPal</string>
+    <string name="opt2">Direct</string>
+    <string name="amount">Amount</string>
+    <string name="donate_button">Donate</string>
+    <string name="total">Total so Far: </string>
+    <string name="total_holder">$ 1998</string>
+</resources>
