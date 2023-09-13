@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,6 +14,9 @@
         android:title="@string/title" />
 
     <EditText
+        android:id="@+id/edit_text1"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -23,6 +25,9 @@
         android:hint="@string/hint_name"/>
 
     <EditText
+        android:id="@+id/edit_text2"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/edit_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -31,31 +36,37 @@
         android:hint="@string/hint_phone"/>
 
     <RadioGroup
+        android:id="@+id/radio1"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/topping1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/topping1" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/topping2" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/topping2" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/topping3" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/topping3" />
 
-        </RadioGroup>
+    </RadioGroup>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/radio2"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/radio1"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -74,6 +85,9 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/radio3"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/radio2"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -98,6 +112,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/order_text"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/radio3"
         android:text="@string/ordering_text"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
@@ -106,6 +123,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/buttons"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/order_text"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -124,4 +144,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
