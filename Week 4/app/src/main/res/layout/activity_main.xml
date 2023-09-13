@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +15,6 @@
 
     <EditText
         android:id="@+id/edit_text1"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -26,8 +24,6 @@
 
     <EditText
         android:id="@+id/edit_text2"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/edit_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -37,8 +33,6 @@
 
     <RadioGroup
         android:id="@+id/radio1"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
@@ -65,8 +59,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/radio2"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/radio1"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -86,8 +78,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/radio3"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/radio2"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -113,8 +103,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/order_text"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/radio3"
         android:text="@string/ordering_text"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
@@ -124,8 +112,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttons"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/order_text"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:orientation="horizontal">
@@ -144,4 +130,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

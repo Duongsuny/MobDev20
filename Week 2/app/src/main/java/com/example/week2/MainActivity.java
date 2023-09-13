@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.widget.NumberPicker;
-import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
