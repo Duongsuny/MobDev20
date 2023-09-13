@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- TableRow 1 -->
+    <TableRow android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="427dp"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:title="@string/title" />
+    </TableRow>
+
+    <!-- TableRow 2 -->
+    <TableRow>
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:inputType="text"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+    </TableRow>
+
+    <!-- TableRow 3 -->
+    <TableRow>
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_phone"
+            android:inputType="text"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+    </TableRow>
+
+    <!-- TableRow 4 -->
+    <TableRow>
+        <RadioGroup
+            android:id="@+id/toppingGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RadioButton
+                android:id="@+id/topping1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/topping1" />
+
+            <RadioButton
+                android:id="@+id/topping2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/topping2" />
+
+            <RadioButton
+                android:id="@+id/topping3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/topping3" />
+        </RadioGroup>
+    </TableRow>
+
+    <!-- TableRow 5 -->
+    <TableRow>
+        <RadioGroup
+            android:id="@+id/shapeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RadioButton
+                android:id="@+id/shape1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shape1" />
+
+            <RadioButton
+                android:id="@+id/shape2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shape2" />
+        </RadioGroup>
+    </TableRow>
+
+    <!-- TableRow 6 -->
+    <TableRow>
+        <RadioGroup
+            android:id="@+id/typeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RadioButton
+                android:id="@+id/type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type1" />
+
+            <RadioButton
+                android:id="@+id/type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type2" />
+
+            <RadioButton
+                android:id="@+id/type3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type3" />
+        </RadioGroup>
+    </TableRow>
+
+    <!-- TableRow 7 -->
+    <TableRow>
+        <TextView
+            android:id="@+id/orderingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ordering_text"
+            android:alpha="0.6"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+    </TableRow>
+
+    <!-- TableRow 8 -->
+    <TableRow>
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/exitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/exit_button" />
+
+            <Button
+                android:id="@+id/smsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/sms_button" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>
