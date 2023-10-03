@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    public class MyReceiver extends BroadcastReceiver {
+    Receiver myReceiver = new Receiver();
+    public class Receiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             Toast.makeText(context, "Received", Toast.LENGTH_SHORT).show();
@@ -30,12 +32,20 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
         IntentFilter intentFilter = new IntentFilter("android.intent.action.MY_ACTION");
-        MyReceiver myReceiver = new MyReceiver();
         registerReceiver(myReceiver, intentFilter);
+        Log.d("Receiver", "Broadcast receiver registered");
+
     }
 
     public void onSendBroadcast(View view) {
         Intent intent = new Intent("android.intent.action.MY_ACTION");
         sendBroadcast(intent);
+    }
+
+    @Override
+    protected void onStop() {
+        unregisterReceiver(myReceiver);
+        Log.d("Reveiver", "Broadcast receiver unregistered");
+        super.onStop();
     }
 }

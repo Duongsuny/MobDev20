@@ -18,11 +18,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnSave, btnLoad;
-    EditText etInput;
+    EditText etInput, etName;
     TextView tvLoad;
     String filename = "";
     String filepath = "";
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         btnLoad = findViewById(R.id.btnLoad);
         etInput = findViewById(R.id.etInput);
+        etName = findViewById(R.id.etName);
         tvLoad = findViewById(R.id.tvLoad);
         filename = "myFile.txt";
         filepath = "MyFileDir";
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 tvLoad.setText("");
                 fileContent = etInput.getText().toString().trim();
+                if(!Objects.equals(etName.getText().toString(), "")) {
+                    filename = etName.getText().toString() + ".txt";
+                }
                 if(isStoragePermissionGranted()){
                     if(!fileContent.equals("")){
                         File myExternalFile = new File(getExternalFilesDir(filepath), filename);
